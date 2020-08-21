@@ -97,5 +97,13 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
+console.log(`array-callbacks Stretch (Arrow Functions):`);
 
-// The reducer in request 4 is an arrow function.
+// forEach's callback does not return anything so we cannot convert that into an arrow function.
+
+const lowCaseAnimalNames2 = zooAnimals.map((animal) => animal.animal_name.toLowerCase());
+console.log(lowCaseAnimalNames2);
+
+let populationTotal2 = 0;
+populationTotal2 = zooAnimals.reduce(((accumulator, animal) => accumulator + animal.population), 0);
+console.log(populationTotal2);
