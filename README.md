@@ -6,14 +6,13 @@ This challenge allows you to practice the concepts and techniques learned over t
 
 This is an individual assessment. All work must be your own. Your challenge score is a measure of your ability to work independently using the material covered through this sprint. You need to demonstrate proficiency in the concepts and objectives introduced and practiced in preceding days.
 
-You are not allowed to collaborate during the sprint challenge. However, you are encouraged to follow the twenty-minute rule and seek support from your TL if you need direction. 
+You are not allowed to collaborate during the sprint challenge. However, you are encouraged to follow the twenty-minute rule and seek support from your TL if you need direction.
 
 _You have **three hours** to complete this challenge. Plan your time accordingly._
 
-
 ## Introduction
 
-You will notice there are several JavaScript files being brought into the index.html file.  Each of those files contain JavaScript problems you need to solve.  If you get stuck on something, skip over it and come back to it later.
+You will notice there are several JavaScript files being brought into the index.html file. Each of those files contain JavaScript problems you need to solve. If you get stuck on something, skip over it and come back to it later.
 
 In meeting the minimum viable product (MVP) specifications listed below, you should have a console full of correct responses to the problems given.
 
@@ -26,16 +25,30 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+   `.forEach` essentially loops through each element of an array and performs a given function for each pass.
+   `.map` returns a new array with the vlaue you return inside of its callback function. It is useful for converting data or making an array of particular properties of an object type.
 
 2. Explain the difference between a callback and a higher order function.
+   Callback functions are functions that are built with the intention that they will be called on by other functions. Callback functions are kept as simple as possible to avoid side-effects (manipulation of data/poperties). They simply will return a value. HOF are functions that are built with the intent to call on other functions. The function that HOF functions call on are callback functions. HOF are the outerlevel functions of these functions--that is why we call them HOF. These principles make our code more reusable and cleaner.
 
 3. What is closure?
+   Due to lexical scoping (all inner levels can access their outer levels), nested functions can access their parent's variables but the parent function cannot acces the child's variables. We call the child function a closure. This is useful because a child function/clsoure can continue to access and operate on its parent function's variables/data after it has terminated.
 
 4. Describe the four rules of the 'this' keyword.
 
-5. Why do we need super() in an extended class?
+   1. Global Object Binding
+      If used in the global scope, 'this' binds/refers to the global object which is the window object.
+   2. Implicit Binding
+      The 'this' keyword becomes bound to whatever is to the left of the dot.
+   3. New binding
+      When used in a constructor function, 'this' refers to the instance of the object that is created and returned by the constructor function.
+   4. Explicit binding
+      Explicit binding takes place when we tell JS specifically what 'this' refers to. Just like when we use JS's .call method.
 
-You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
+5) Why do we need super() in an extended class?
+   We need 'super()' in an extended class to invoke the parent class's constructor function.
+
+You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
 
@@ -57,26 +70,30 @@ Your finished project must include all of the following requirements:
 #### Task A: Objects and Arrays
 
 Test your knowledge of advanced array methods and callbacks.
-* [ ] Use the [arrays-callbacks.js](challenges/arrays-callbacks.js) link to get started.  Read the instructions carefully!
+
+- [ ] Use the [arrays-callbacks.js](challenges/arrays-callbacks.js) link to get started. Read the instructions carefully!
 
 #### Task B: Closure
 
-This challenge takes a look at closures as well as scope. 
-* [ ] Use the [closure.js](challenges/closure.js) link to get started. Read the instructions carefully!
+This challenge takes a look at closures as well as scope.
+
+- [ ] Use the [closure.js](challenges/closure.js) link to get started. Read the instructions carefully!
 
 #### Task C: Prototypes
 
 Create constructors, bind methods, and create cuboids in this prototypes challenge.
-* [ ] Use the [prototypes.js](challenges/prototypes.js) link to get started. Read the instructions carefully!
+
+- [ ] Use the [prototypes.js](challenges/prototypes.js) link to get started. Read the instructions carefully!
 
 #### Task D: Classes
 
 Once you have completed the prototypes challenge, it's time to convert all your hard work into classes.
-* [ ] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
+
+- [ ] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
 
 In your solutions, it is essential that you follow best practices and produce clean and professional results. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
-### Task 3: Stretch Goals 
+### Task 3: Stretch Goals
 
 There are a few stretch problems found throughout the files, don't work on them until you are finished with MVP requirements!
 
@@ -84,8 +101,6 @@ There are a few stretch problems found throughout the files, don't work on them 
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo). **Please don't merge your own pull request**
 - [ ] Add your team lead as a reviewer on the pull-request
 - [ ] Your team lead will count the project as complete after receiving your pull-request
-
-
